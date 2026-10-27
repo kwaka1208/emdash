@@ -1,19 +1,22 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "my-marketing-site",
+	"name": "yamagoya-works",
 	"main": "./src/worker.ts",
 	"compatibility_date": "2026-02-24",
 	"compatibility_flags": ["nodejs_compat"],
+	"workers_dev": false,
+	"routes": [{ "pattern": "emdash.crssrds.jp", "custom_domain": true }],
 	"d1_databases": [
 		{
 			"binding": "DB",
-			"database_name": "my-marketing-site",
+			"database_name": "yamagoya-works",
+			"database_id": "3808cf6b-69dc-4d24-8fba-bef914ef55e9",
 		},
 	],
 	"r2_buckets": [
 		{
 			"binding": "MEDIA",
-			"bucket_name": "my-marketing-media",
+			"bucket_name": "yamagoya-works-media",
 		},
 	],
 	// Sandboxed plugins require Worker Loader, available on Workers paid plans. Uncomment to enable:
