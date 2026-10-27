@@ -85,6 +85,7 @@ const wordmarkLength = [...siteTitle].length;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="noindex" />
 		<title>{fullTitle}</title>
 		<EmDashHead page={pageCtx} />
 		<Font cssVariable="--font-body" preload />
@@ -105,87 +106,92 @@ const wordmarkLength = [...siteTitle].length;
 	<body>
 		<EmDashBodyStart page={pageCtx} />
 		<a href="#main" class="skip-link">Skip to content</a>
-		<header class="site-header">
-			<div class="nav">
-				<a href="/" class="nav__logo">
+		<div class="site-top">
+			<p class="demo-notice">
+				このサイトは <a href="https://emdashcms.com">EmDash</a> の構築例です。山小屋ワークス・峰沢村は架空のもので、実在の施設ではありません。
+			</p>
+			<header class="site-header">
+				<div class="nav">
+					<a href="/" class="nav__logo">
+						{
+							siteLogo ? (
+								<img
+									src={siteLogo.url}
+									alt={siteLogo.alt || siteTitle}
+									width={siteLogo.width}
+									height={siteLogo.height}
+									class="nav__logo-img"
+								/>
+							) : (
+								siteTitle
+							)
+						}
+					</a>
 					{
-						siteLogo ? (
-							<img
-								src={siteLogo.url}
-								alt={siteLogo.alt || siteTitle}
-								width={siteLogo.width}
-								height={siteLogo.height}
-								class="nav__logo-img"
-							/>
-						) : (
-							siteTitle
+						navLinks.length > 0 && (
+							<nav class="nav__links" aria-label="メインメニュー">
+								{navLinks.map((item) => (
+									<a
+										href={item.url}
+										target={item.target}
+										rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+									>
+										{item.label}
+									</a>
+								))}
+							</nav>
 						)
 					}
-				</a>
-				{
-					navLinks.length > 0 && (
-						<nav class="nav__links" aria-label="メインメニュー">
-							{navLinks.map((item) => (
-								<a
-									href={item.url}
-									target={item.target}
-									rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+					<div class="nav__actions">
+						{isLoggedIn && <a href="/_emdash/admin" class="nav__admin">Admin</a>}
+						{navButtons.map((item) => (
+							<a
+								href={item.url}
+								target={item.target}
+								rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+								class="btn btn-sm nav__cta"
+							>
+								{item.label}
+							</a>
+						))}
+						{
+							hasMenuPanel && (
+								<button
+									type="button"
+									class="nav__menu-btn"
+									aria-expanded="false"
+									aria-controls="mobile-menu"
+									aria-label="メニュー"
 								>
-									{item.label}
-								</a>
-							))}
-						</nav>
-					)
-				}
-				<div class="nav__actions">
-					{isLoggedIn && <a href="/_emdash/admin" class="nav__admin">Admin</a>}
-					{navButtons.map((item) => (
-						<a
-							href={item.url}
-							target={item.target}
-							rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
-							class="btn btn-sm nav__cta"
-						>
-							{item.label}
-						</a>
-					))}
+									<Icon name="ph:list" class="nav__menu-open" aria-hidden="true" />
+									<Icon name="ph:x" class="nav__menu-close" aria-hidden="true" />
+								</button>
+							)
+						}
+					</div>
 					{
 						hasMenuPanel && (
-							<button
-								type="button"
-								class="nav__menu-btn"
-								aria-expanded="false"
-								aria-controls="mobile-menu"
-								aria-label="メニュー"
-							>
-								<Icon name="ph:list" class="nav__menu-open" aria-hidden="true" />
-								<Icon name="ph:x" class="nav__menu-close" aria-hidden="true" />
-							</button>
+							<nav id="mobile-menu" class="nav__panel" aria-label="メインメニュー" hidden>
+								{[...navLinks, ...panelButtons].map((item) => (
+									<a
+										href={item.url}
+										target={item.target}
+										rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+									>
+										{item.label}
+									</a>
+								))}
+								{isLoggedIn && (
+									<a href="/_emdash/admin" class="nav__panel-admin">
+										Admin
+									</a>
+								)}
+							</nav>
 						)
 					}
 				</div>
-				{
-					hasMenuPanel && (
-						<nav id="mobile-menu" class="nav__panel" aria-label="メインメニュー" hidden>
-							{[...navLinks, ...panelButtons].map((item) => (
-								<a
-									href={item.url}
-									target={item.target}
-									rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
-								>
-									{item.label}
-								</a>
-							))}
-							{isLoggedIn && (
-								<a href="/_emdash/admin" class="nav__panel-admin">
-									Admin
-								</a>
-							)}
-						</nav>
-					)
-				}
-			</div>
-		</header>
+			</header>
+		</div>
 
 		<main id="main" tabindex="-1">
 			<slot />
@@ -234,6 +240,9 @@ const wordmarkLength = [...siteTitle].length;
 						))
 					}
 				</div>
+				<p class="footer__notice">
+					掲載している施設・会社・人物・メールアドレスはすべて架空です。
+				</p>
 				<div class="footer__legal">
 					<p>&copy; {year} {siteTitle}</p>
 					<div class="theme-switcher" role="group" aria-label="表示テーマ">
@@ -564,7 +573,8 @@ const wordmarkLength = [...siteTitle].length;
 				/* Anchor targets land below the floating header */
 				section[id],
 				main {
-					scroll-margin-top: 88px;
+					/* 88px + 固定した構築例の帯（狭い画面では2行になる） */
+					scroll-margin-top: 136px;
 				}
 
 				.media {
@@ -961,6 +971,36 @@ const wordmarkLength = [...siteTitle].length;
 		</style>
 
 		<style>
+			/* 構築例の帯とヘッダーをまとめて上部に固定する */
+			.site-top {
+				position: sticky;
+				top: 0;
+				z-index: 50;
+				pointer-events: none;
+			}
+
+			.site-top .site-header {
+				position: relative;
+			}
+
+			.demo-notice {
+				pointer-events: auto;
+				margin: 0;
+				padding-block: 8px;
+				padding-inline: var(--gutter);
+				background: var(--color-notice-bg);
+				color: var(--color-notice-text);
+				font-size: 13px;
+				font-weight: 500;
+				text-align: center;
+			}
+
+			.demo-notice a {
+				color: inherit;
+				text-decoration: underline;
+				text-underline-offset: 3px;
+			}
+
 			.site-header {
 				position: sticky;
 				top: 0;
@@ -1160,6 +1200,16 @@ const wordmarkLength = [...siteTitle].length;
 				color: var(--color-text);
 			}
 
+			.footer__notice {
+				margin-top: 56px;
+				font-size: 13.5px;
+				color: var(--color-muted);
+			}
+
+			.footer__notice + .footer__legal {
+				margin-top: 20px;
+			}
+
 			.footer__legal {
 				display: flex;
 				flex-wrap: wrap;
@@ -1268,6 +1318,13 @@ const wordmarkLength = [...siteTitle].length;
 
 				.footer__brand {
 					grid-column: 1 / -1;
+				}
+			}
+
+			/* スマートフォン幅で、和文のサイト名が省略されずに収まる大きさにする */
+			@media (max-width: 480px) {
+				.nav__logo {
+					font-size: 21px;
 				}
 			}
 

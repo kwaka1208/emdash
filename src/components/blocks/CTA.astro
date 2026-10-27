@@ -108,7 +108,8 @@ const secondaryCta =
 	}
 
 	.cta__headline {
-		max-width: 560px;
+		/* 和文の見出しが1行に収まる文字数（全角で約11文字） */
+		max-width: 11em;
 		font-size: clamp(44px, 5.2vw, 76px);
 		line-height: 0.98;
 	}
@@ -144,7 +145,7 @@ const secondaryCta =
 	}
 
 	.cta--night .cta__headline {
-		max-width: 16ch;
+		max-width: 11em;
 	}
 
 	.cta--night .cta__actions {

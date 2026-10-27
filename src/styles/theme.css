@@ -33,4 +33,15 @@
 
 :root {
 	--color-accent: light-dark(#2f6b3a, #7fc48a);
+	/* 構築例であることを示す上部の帯。ライト・ダークとも同じ黄色 */
+	--color-notice-bg: #f5c84c;
+	--color-notice-text: #2a2210;
+}
+
+/* 和文の見出しを語の途中で折り返さない（Chrome系のみ。他のブラウザは従来どおり）。
+   行の長さをそろえ、最後の1文字だけが次の行に残らないようにする */
+.display,
+.section-headline {
+	word-break: auto-phrase;
+	text-wrap: balance;
 }

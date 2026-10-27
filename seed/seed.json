@@ -2,14 +2,17 @@
 	"$schema": "https://emdashcms.com/seed.schema.json",
 	"version": "1",
 	"meta": {
-		"name": "Marketing Starter",
-		"description": "A photo-led marketing site for a product or service, built from modular blocks",
+		"name": "山小屋ワークス（EmDash 構築例）",
+		"description": "EmDash の marketing テンプレートで作った構築例。山小屋ワークス・峰沢村は架空の施設で、実在しません",
 		"author": "EmDash"
 	},
+	"defaultLocale": "ja",
 	"settings": {
-		"title": "Halden",
-		"tagline": "Energy intelligence for commercial buildings",
-		"seo": { "titleSeparator": "—" }
+		"title": "山小屋ワークス",
+		"tagline": "標高1,200mで働き、泊まる。峰沢村のコワーキング山小屋",
+		"seo": {
+			"titleSeparator": "—"
+		}
 	},
 	"blockTypes": [
 		{
@@ -22,23 +25,48 @@
 				{
 					"version": 1,
 					"fields": [
-						{ "slug": "headline", "label": "Headline", "type": "string", "required": true },
-						{ "slug": "subheadline", "label": "Subheadline", "type": "text" },
-						{ "slug": "primary_cta_label", "label": "Primary button text", "type": "string" },
+						{
+							"slug": "headline",
+							"label": "Headline",
+							"type": "string",
+							"required": true
+						},
+						{
+							"slug": "subheadline",
+							"label": "Subheadline",
+							"type": "text"
+						},
+						{
+							"slug": "primary_cta_label",
+							"label": "Primary button text",
+							"type": "string"
+						},
 						{
 							"slug": "primary_cta_url",
 							"label": "Primary button link (starts with /, https://, mailto:, tel: or #)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|(?:https?://|mailto:|tel:|/(?!/)|#).+)$" }
+							"validation": {
+								"pattern": "^(?:$|(?:https?://|mailto:|tel:|/(?!/)|#).+)$"
+							}
 						},
-						{ "slug": "secondary_cta_label", "label": "Secondary button text", "type": "string" },
+						{
+							"slug": "secondary_cta_label",
+							"label": "Secondary button text",
+							"type": "string"
+						},
 						{
 							"slug": "secondary_cta_url",
 							"label": "Secondary button link (starts with /, https://, mailto:, tel: or #)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|(?:https?://|mailto:|tel:|/(?!/)|#).+)$" }
+							"validation": {
+								"pattern": "^(?:$|(?:https?://|mailto:|tel:|/(?!/)|#).+)$"
+							}
 						},
-						{ "slug": "image", "label": "Image", "type": "image" },
+						{
+							"slug": "image",
+							"label": "Image",
+							"type": "image"
+						},
 						{
 							"slug": "image_caption",
 							"label": "Image caption (shown on the photo)",
@@ -53,7 +81,9 @@
 							"slug": "eyebrow_url",
 							"label": "Announcement link (starts with /, https://, mailto:, tel: or #)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|/(?!/|\\\\).*|(?:https?://|mailto:|tel:|#).+)$" }
+							"validation": {
+								"pattern": "^(?:$|/(?!/|\\\\).*|(?:https?://|mailto:|tel:|#).+)$"
+							}
 						},
 						{
 							"slug": "centered",
@@ -65,7 +95,9 @@
 							"slug": "anchor_id",
 							"label": "Section ID (lowercase, for links like /#pricing)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|[a-z][a-z0-9_-]*)$" }
+							"validation": {
+								"pattern": "^(?:$|[a-z][a-z0-9_-]*)$"
+							}
 						}
 					]
 				}
@@ -81,13 +113,22 @@
 				{
 					"version": 1,
 					"fields": [
-						{ "slug": "headline", "label": "Headline", "type": "string", "required": true },
+						{
+							"slug": "headline",
+							"label": "Headline",
+							"type": "string",
+							"required": true
+						},
 						{
 							"slug": "subheadline",
 							"label": "Second sentence (shown muted after the headline)",
 							"type": "text"
 						},
-						{ "slug": "eyebrow", "label": "Label above headline", "type": "string" },
+						{
+							"slug": "eyebrow",
+							"label": "Label above headline",
+							"type": "string"
+						},
 						{
 							"slug": "features",
 							"label": "Features",
@@ -126,7 +167,12 @@
 											"trend"
 										]
 									},
-									{ "slug": "title", "label": "Title", "type": "string", "required": true },
+									{
+										"slug": "title",
+										"label": "Title",
+										"type": "string",
+										"required": true
+									},
 									{
 										"slug": "description",
 										"label": "Description (leave a blank line between paragraphs)",
@@ -140,7 +186,9 @@
 							"slug": "anchor_id",
 							"label": "Section ID (lowercase, for links like /#pricing)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|[a-z][a-z0-9_-]*)$" }
+							"validation": {
+								"pattern": "^(?:$|[a-z][a-z0-9_-]*)$"
+							}
 						}
 					]
 				}
@@ -176,9 +224,22 @@
 										"type": "text",
 										"required": true
 									},
-									{ "slug": "author", "label": "Author name", "type": "string", "required": true },
-									{ "slug": "role", "label": "Role or title", "type": "string" },
-									{ "slug": "company", "label": "Company", "type": "string" },
+									{
+										"slug": "author",
+										"label": "Author name",
+										"type": "string",
+										"required": true
+									},
+									{
+										"slug": "role",
+										"label": "Role or title",
+										"type": "string"
+									},
+									{
+										"slug": "company",
+										"label": "Company",
+										"type": "string"
+									},
 									{
 										"slug": "avatar",
 										"label": "Avatar (initials show when empty)",
@@ -191,7 +252,9 @@
 							"slug": "anchor_id",
 							"label": "Section ID (lowercase, for links like /#pricing)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|[a-z][a-z0-9_-]*)$" }
+							"validation": {
+								"pattern": "^(?:$|[a-z][a-z0-9_-]*)$"
+							}
 						}
 					]
 				}
@@ -207,7 +270,11 @@
 				{
 					"version": 1,
 					"fields": [
-						{ "slug": "headline", "label": "Headline", "type": "string" },
+						{
+							"slug": "headline",
+							"label": "Headline",
+							"type": "string"
+						},
 						{
 							"slug": "plans",
 							"label": "Plans",
@@ -217,15 +284,33 @@
 								"minItems": 1,
 								"maxItems": 3,
 								"subFields": [
-									{ "slug": "name", "label": "Plan name", "type": "string", "required": true },
-									{ "slug": "price", "label": "Price", "type": "string", "required": true },
-									{ "slug": "period", "label": "Period", "type": "string" },
+									{
+										"slug": "name",
+										"label": "Plan name",
+										"type": "string",
+										"required": true
+									},
+									{
+										"slug": "price",
+										"label": "Price",
+										"type": "string",
+										"required": true
+									},
+									{
+										"slug": "period",
+										"label": "Period",
+										"type": "string"
+									},
 									{
 										"slug": "description",
 										"label": "Description (leave a blank line between paragraphs)",
 										"type": "text"
 									},
-									{ "slug": "features", "label": "Features (one per line)", "type": "text" },
+									{
+										"slug": "features",
+										"label": "Features (one per line)",
+										"type": "text"
+									},
 									{
 										"slug": "cta_label",
 										"label": "Button text",
@@ -238,7 +323,11 @@
 										"type": "string",
 										"required": true
 									},
-									{ "slug": "highlighted", "label": "Highlight this plan", "type": "boolean" },
+									{
+										"slug": "highlighted",
+										"label": "Highlight this plan",
+										"type": "boolean"
+									},
 									{
 										"slug": "badge",
 										"label": "Badge text, for example Most popular",
@@ -251,7 +340,9 @@
 							"slug": "anchor_id",
 							"label": "Section ID (lowercase, for links like /#pricing)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|[a-z][a-z0-9_-]*)$" }
+							"validation": {
+								"pattern": "^(?:$|[a-z][a-z0-9_-]*)$"
+							}
 						}
 					]
 				}
@@ -267,8 +358,16 @@
 				{
 					"version": 1,
 					"fields": [
-						{ "slug": "headline", "label": "Headline", "type": "string" },
-						{ "slug": "subheadline", "label": "Subheadline", "type": "text" },
+						{
+							"slug": "headline",
+							"label": "Headline",
+							"type": "string"
+						},
+						{
+							"slug": "subheadline",
+							"label": "Subheadline",
+							"type": "text"
+						},
 						{
 							"slug": "items",
 							"label": "Questions",
@@ -278,7 +377,12 @@
 								"minItems": 1,
 								"maxItems": 12,
 								"subFields": [
-									{ "slug": "question", "label": "Question", "type": "string", "required": true },
+									{
+										"slug": "question",
+										"label": "Question",
+										"type": "string",
+										"required": true
+									},
 									{
 										"slug": "answer",
 										"label": "Answer (leave a blank line between paragraphs)",
@@ -292,7 +396,9 @@
 							"slug": "anchor_id",
 							"label": "Section ID (lowercase, for links like /#pricing)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|[a-z][a-z0-9_-]*)$" }
+							"validation": {
+								"pattern": "^(?:$|[a-z][a-z0-9_-]*)$"
+							}
 						}
 					]
 				}
@@ -322,8 +428,17 @@
 								"minItems": 1,
 								"maxItems": 24,
 								"subFields": [
-									{ "slug": "name", "label": "Company name", "type": "string", "required": true },
-									{ "slug": "logo", "label": "Logo", "type": "image" }
+									{
+										"slug": "name",
+										"label": "Company name",
+										"type": "string",
+										"required": true
+									},
+									{
+										"slug": "logo",
+										"label": "Logo",
+										"type": "image"
+									}
 								]
 							}
 						},
@@ -331,7 +446,9 @@
 							"slug": "anchor_id",
 							"label": "Section ID (lowercase, for links like /#pricing)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|[a-z][a-z0-9_-]*)$" }
+							"validation": {
+								"pattern": "^(?:$|[a-z][a-z0-9_-]*)$"
+							}
 						}
 					]
 				}
@@ -347,22 +464,45 @@
 				{
 					"version": 1,
 					"fields": [
-						{ "slug": "headline", "label": "Headline", "type": "string", "required": true },
-						{ "slug": "eyebrow", "label": "Label above headline", "type": "string" },
+						{
+							"slug": "headline",
+							"label": "Headline",
+							"type": "string",
+							"required": true
+						},
+						{
+							"slug": "eyebrow",
+							"label": "Label above headline",
+							"type": "string"
+						},
 						{
 							"slug": "body",
 							"label": "Body (leave a blank line between paragraphs)",
 							"type": "text"
 						},
-						{ "slug": "points", "label": "Checklist (one item per line)", "type": "text" },
-						{ "slug": "cta_label", "label": "Link text", "type": "string" },
+						{
+							"slug": "points",
+							"label": "Checklist (one item per line)",
+							"type": "text"
+						},
+						{
+							"slug": "cta_label",
+							"label": "Link text",
+							"type": "string"
+						},
 						{
 							"slug": "cta_url",
 							"label": "Link (starts with /, https://, mailto:, tel: or #)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|/(?!/|\\\\).*|(?:https?://|mailto:|tel:|#).+)$" }
+							"validation": {
+								"pattern": "^(?:$|/(?!/|\\\\).*|(?:https?://|mailto:|tel:|#).+)$"
+							}
 						},
-						{ "slug": "image", "label": "Image", "type": "image" },
+						{
+							"slug": "image",
+							"label": "Image",
+							"type": "image"
+						},
 						{
 							"slug": "image_caption",
 							"label": "Image caption (shown on the photo)",
@@ -378,7 +518,9 @@
 							"slug": "anchor_id",
 							"label": "Section ID (lowercase, for links like /#pricing)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|[a-z][a-z0-9_-]*)$" }
+							"validation": {
+								"pattern": "^(?:$|[a-z][a-z0-9_-]*)$"
+							}
 						}
 					]
 				}
@@ -394,7 +536,11 @@
 				{
 					"version": 1,
 					"fields": [
-						{ "slug": "headline", "label": "Headline", "type": "string" },
+						{
+							"slug": "headline",
+							"label": "Headline",
+							"type": "string"
+						},
 						{
 							"slug": "subheadline",
 							"label": "Second sentence (shown muted after the headline)",
@@ -409,8 +555,18 @@
 								"minItems": 1,
 								"maxItems": 6,
 								"subFields": [
-									{ "slug": "value", "label": "Value", "type": "string", "required": true },
-									{ "slug": "label", "label": "Label", "type": "string", "required": true }
+									{
+										"slug": "value",
+										"label": "Value",
+										"type": "string",
+										"required": true
+									},
+									{
+										"slug": "label",
+										"label": "Label",
+										"type": "string",
+										"required": true
+									}
 								]
 							}
 						},
@@ -418,7 +574,9 @@
 							"slug": "anchor_id",
 							"label": "Section ID (lowercase, for links like /#pricing)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|[a-z][a-z0-9_-]*)$" }
+							"validation": {
+								"pattern": "^(?:$|[a-z][a-z0-9_-]*)$"
+							}
 						}
 					]
 				}
@@ -434,32 +592,55 @@
 				{
 					"version": 1,
 					"fields": [
-						{ "slug": "headline", "label": "Headline", "type": "string", "required": true },
+						{
+							"slug": "headline",
+							"label": "Headline",
+							"type": "string",
+							"required": true
+						},
 						{
 							"slug": "body",
 							"label": "Body (leave a blank line between paragraphs)",
 							"type": "text"
 						},
-						{ "slug": "primary_cta_label", "label": "Primary button text", "type": "string" },
+						{
+							"slug": "primary_cta_label",
+							"label": "Primary button text",
+							"type": "string"
+						},
 						{
 							"slug": "primary_cta_url",
 							"label": "Primary button link (starts with /, https://, mailto:, tel: or #)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|/(?!/|\\\\).*|(?:https?://|mailto:|tel:|#).+)$" }
+							"validation": {
+								"pattern": "^(?:$|/(?!/|\\\\).*|(?:https?://|mailto:|tel:|#).+)$"
+							}
 						},
-						{ "slug": "secondary_cta_label", "label": "Secondary button text", "type": "string" },
+						{
+							"slug": "secondary_cta_label",
+							"label": "Secondary button text",
+							"type": "string"
+						},
 						{
 							"slug": "secondary_cta_url",
 							"label": "Secondary button link (starts with /, https://, mailto:, tel: or #)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|/(?!/|\\\\).*|(?:https?://|mailto:|tel:|#).+)$" }
+							"validation": {
+								"pattern": "^(?:$|/(?!/|\\\\).*|(?:https?://|mailto:|tel:|#).+)$"
+							}
 						},
-						{ "slug": "image", "label": "Background image", "type": "image" },
+						{
+							"slug": "image",
+							"label": "Background image",
+							"type": "image"
+						},
 						{
 							"slug": "anchor_id",
 							"label": "Section ID (lowercase, for links like /#pricing)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|[a-z][a-z0-9_-]*)$" }
+							"validation": {
+								"pattern": "^(?:$|[a-z][a-z0-9_-]*)$"
+							}
 						}
 					]
 				}
@@ -475,9 +656,21 @@
 				{
 					"version": 1,
 					"fields": [
-						{ "slug": "headline", "label": "Headline", "type": "string" },
-						{ "slug": "eyebrow", "label": "Label above headline", "type": "string" },
-						{ "slug": "subheadline", "label": "Subheadline", "type": "text" },
+						{
+							"slug": "headline",
+							"label": "Headline",
+							"type": "string"
+						},
+						{
+							"slug": "eyebrow",
+							"label": "Label above headline",
+							"type": "string"
+						},
+						{
+							"slug": "subheadline",
+							"label": "Subheadline",
+							"type": "text"
+						},
 						{
 							"slug": "options",
 							"label": "Contact options",
@@ -494,7 +687,12 @@
 										"required": true,
 										"options": ["email", "support", "sales", "phone", "chat", "location"]
 									},
-									{ "slug": "title", "label": "Title", "type": "string", "required": true },
+									{
+										"slug": "title",
+										"label": "Title",
+										"type": "string",
+										"required": true
+									},
 									{
 										"slug": "description",
 										"label": "Description (leave a blank line between paragraphs)",
@@ -519,7 +717,9 @@
 							"slug": "anchor_id",
 							"label": "Section ID (lowercase, for links like /#pricing)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|[a-z][a-z0-9_-]*)$" }
+							"validation": {
+								"pattern": "^(?:$|[a-z][a-z0-9_-]*)$"
+							}
 						}
 					]
 				}
@@ -535,13 +735,24 @@
 				{
 					"version": 1,
 					"fields": [
-						{ "slug": "headline", "label": "Headline", "type": "string" },
-						{ "slug": "body", "label": "Body", "type": "portableText", "required": true },
+						{
+							"slug": "headline",
+							"label": "Headline",
+							"type": "string"
+						},
+						{
+							"slug": "body",
+							"label": "Body",
+							"type": "portableText",
+							"required": true
+						},
 						{
 							"slug": "anchor_id",
 							"label": "Section ID (lowercase, for links like /#pricing)",
 							"type": "string",
-							"validation": { "pattern": "^(?:$|[a-z][a-z0-9_-]*)$" }
+							"validation": {
+								"pattern": "^(?:$|[a-z][a-z0-9_-]*)$"
+							}
 						}
 					]
 				}
@@ -589,36 +800,36 @@
 	"menus": [
 		{
 			"name": "primary",
-			"label": "Primary Navigation",
+			"label": "メインメニュー",
 			"items": [
 				{
 					"type": "custom",
-					"label": "Platform",
+					"label": "設備",
 					"url": "/#platform"
 				},
 				{
 					"type": "custom",
-					"label": "Monitoring",
+					"label": "会員プラン",
 					"url": "/#monitoring"
 				},
 				{
 					"type": "custom",
-					"label": "Customers",
+					"label": "利用者の声",
 					"url": "/#customers"
 				},
 				{
 					"type": "custom",
-					"label": "Pricing",
+					"label": "料金",
 					"url": "/pricing"
 				},
 				{
 					"type": "custom",
-					"label": "Contact",
+					"label": "お問い合わせ",
 					"url": "/contact"
 				},
 				{
 					"type": "custom",
-					"label": "Book a demo",
+					"label": "空室を問い合わせる",
 					"url": "/contact",
 					"cssClasses": "button"
 				}
@@ -626,30 +837,70 @@
 		},
 		{
 			"name": "footer_product",
-			"label": "Product",
+			"label": "施設とプラン",
 			"items": [
-				{ "type": "custom", "label": "Platform", "url": "/#platform" },
-				{ "type": "custom", "label": "Monitoring", "url": "/#monitoring" },
-				{ "type": "custom", "label": "Planning", "url": "/#planning" },
-				{ "type": "custom", "label": "Pricing", "url": "/pricing" }
+				{
+					"type": "custom",
+					"label": "設備",
+					"url": "/#platform"
+				},
+				{
+					"type": "custom",
+					"label": "会員プラン",
+					"url": "/#monitoring"
+				},
+				{
+					"type": "custom",
+					"label": "法人研修・合宿",
+					"url": "/#planning"
+				},
+				{
+					"type": "custom",
+					"label": "料金",
+					"url": "/pricing"
+				}
 			]
 		},
 		{
 			"name": "footer_company",
-			"label": "Company",
+			"label": "山小屋ワークス",
 			"items": [
-				{ "type": "custom", "label": "Customers", "url": "/#customers" },
-				{ "type": "custom", "label": "FAQ", "url": "/#faq" },
-				{ "type": "custom", "label": "Contact", "url": "/contact" }
+				{
+					"type": "custom",
+					"label": "利用者の声",
+					"url": "/#customers"
+				},
+				{
+					"type": "custom",
+					"label": "よくある質問",
+					"url": "/#faq"
+				},
+				{
+					"type": "custom",
+					"label": "お問い合わせ",
+					"url": "/contact"
+				}
 			]
 		},
 		{
 			"name": "footer_support",
-			"label": "Support",
+			"label": "メールで相談",
 			"items": [
-				{ "type": "custom", "label": "Talk to sales", "url": "mailto:sales@halden.example" },
-				{ "type": "custom", "label": "Support", "url": "mailto:support@halden.example" },
-				{ "type": "custom", "label": "Email us", "url": "mailto:hello@halden.example" }
+				{
+					"type": "custom",
+					"label": "法人研修・合宿",
+					"url": "mailto:houjin@yamagoya-works.example"
+				},
+				{
+					"type": "custom",
+					"label": "会員プラン",
+					"url": "mailto:member@yamagoya-works.example"
+				},
+				{
+					"type": "custom",
+					"label": "空室・宿泊",
+					"url": "mailto:info@yamagoya-works.example"
+				}
 			]
 		}
 	],
@@ -666,35 +917,48 @@
 							"_type": "marketing_hero",
 							"_version": 1,
 							"_key": "hero",
-							"eyebrow": "New: automated CSRD and GRESB reporting",
-							"eyebrow_url": "/#planning",
-							"headline": "Every building, running at its best.",
-							"subheadline": "Halden connects to the meters and systems you already have, finds the waste, and fixes it automatically, across one building or ten thousand.",
-							"primary_cta_label": "Book a demo",
+							"eyebrow": "2027年春の法人合宿、予約受付中",
+							"eyebrow_url": "/pricing",
+							"headline": "標高1,200mの村で、いつもの仕事を。",
+							"subheadline": "峰沢村の山小屋は、全室に光回線とモニターがあります。東京から2時間40分。1泊でも、1か月でも、泊まりながら働けます。",
+							"primary_cta_label": "空室を問い合わせる",
 							"primary_cta_url": "/contact",
-							"secondary_cta_label": "See how it works",
+							"secondary_cta_label": "設備を見る",
 							"secondary_cta_url": "/#platform",
 							"image": {
 								"$media": {
-									"url": "https://images.unsplash.com/photo-1476889833843-503f40e367a0?w=2400&h=1350&fit=crop&q=80&fm=jpg",
-									"alt": "Concrete atrium with round skylights, seen from below",
-									"filename": "halden-atrium.jpg"
+									"url": "https://images.unsplash.com/photo-1761052877503-c76a2801ed5b?w=2400&h=1350&fit=crop&q=80&fm=jpg",
+									"alt": "杉林の斜面のふもとに建つ、大きな屋根の古民家",
+									"filename": "yamagoya-hero.jpg"
 								}
 							},
-							"image_caption": "Riverside Tower · 18% below its 2024 energy baseline"
+							"image_caption": "峰沢村・標高1,200m",
+							"centered": false
 						},
 						{
 							"_type": "marketing_logos",
 							"_version": 1,
 							"_key": "logos",
-							"headline": "Trusted by property, hospitality and campus teams",
+							"headline": "合宿・研修でご利用いただいた会社",
 							"logos": [
-								{ "name": "Oakline" },
-								{ "name": "Arden Hotels" },
-								{ "name": "Calder" },
-								{ "name": "Westmere" },
-								{ "name": "Kestrel" },
-								{ "name": "Northfield" }
+								{
+									"name": "北斗システムズ"
+								},
+								{
+									"name": "あさぎ設計"
+								},
+								{
+									"name": "ミナト製作所"
+								},
+								{
+									"name": "こもれび出版"
+								},
+								{
+									"name": "遠野データ"
+								},
+								{
+									"name": "しらかば会計"
+								}
 							]
 						},
 						{
@@ -702,39 +966,39 @@
 							"_version": 1,
 							"_key": "platform",
 							"anchor_id": "platform",
-							"eyebrow": "Platform",
-							"headline": "One platform for every building.",
-							"subheadline": "Meters, controls and reports, finally in one place.",
+							"eyebrow": "設備",
+							"headline": "仕事の道具は、部屋にそろっています。",
+							"subheadline": "持ってくるのは、ノートPCと着替えだけで足ります。",
 							"features": [
 								{
-									"icon": "gauge",
-									"title": "Every meter, one view",
-									"description": "Electricity, gas, water and heat from every site, normalised and live."
+									"icon": "globe",
+									"title": "全室に光回線",
+									"description": "Wi-Fiとは別に、各部屋に有線LANの差し込み口があります。"
 								},
 								{
-									"icon": "zap",
-									"title": "Fixes that run themselves",
-									"description": "When a building drifts, Halden adjusts schedules and setpoints, then shows what it saved."
+									"icon": "code",
+									"title": "27インチのモニター",
+									"description": "USB-Cのケーブル1本で、ノートPCの画面を広げられます。"
 								},
 								{
-									"icon": "file",
-									"title": "Reports in minutes",
-									"description": "CSRD, GRESB and ENERGY STAR submissions from the same data, ready for your auditor."
+									"icon": "users",
+									"title": "会議室と打ち合わせ室",
+									"description": "12人まで入れる会議室と、4人用の打ち合わせ室があります。予約は前日までにどうぞ。"
 								},
 								{
-									"icon": "chart",
-									"title": "Benchmarks that mean something",
-									"description": "Compare buildings by type, climate and occupancy, not just floor area."
+									"icon": "clock",
+									"title": "ラウンジは24時間",
+									"description": "夜に急ぎの対応が入っても、共用ラウンジで作業を続けられます。"
 								},
 								{
-									"icon": "plug",
-									"title": "Works with what you have",
-									"description": "Connects to your existing BMS, meters and utility accounts. No rip and replace."
+									"icon": "thermometer",
+									"title": "夏でも25℃前後",
+									"description": "標高1,200mの夏は涼しく、冷房はほとんど使いません。"
 								},
 								{
-									"icon": "trend",
-									"title": "Budgets you can trust",
-									"description": "Forecast spend and carbon a year ahead, with weather and tariffs built in."
+									"icon": "leaf",
+									"title": "歩いて5分で登山口",
+									"description": "昼休みに、尾根の見晴らし台まで往復できます。"
 								}
 							]
 						},
@@ -743,53 +1007,66 @@
 							"_version": 1,
 							"_key": "monitoring",
 							"anchor_id": "monitoring",
-							"eyebrow": "Monitoring",
-							"headline": "See every kilowatt, room by room.",
-							"body": "Halden reads your meters every fifteen minutes and learns how each building should behave. When a chiller runs overnight or a floor heats an empty office, you know before the bill does.",
-							"points": "Live data from 400+ meter and BMS integrations\nAlerts ranked by cost, not by noise\nEvery fix logged with the saving it made",
-							"cta_label": "Book a walkthrough",
-							"cta_url": "/contact",
+							"eyebrow": "会員プラン",
+							"headline": "月に何日か、山で働く。",
+							"body": "会員になると、月の決まった日数を峰沢村で過ごせます。午前は窓の外の尾根を見ながらメールを片づけ、午後はいつもどおりオンラインの会議に出る。東京の仕事はそのままで、働く場所だけが変わります。",
+							"points": "部屋の机とモニターは予約なしで使えます\n連泊なら、着替えや仕事の道具は部屋に置いたままでかまいません\n村の共同浴場は、会員なら無料です",
+							"cta_label": "会員プランを見る",
+							"cta_url": "/pricing",
 							"image": {
 								"$media": {
-									"url": "https://images.unsplash.com/photo-1504297050568-910d24c426d3?w=1200&h=1500&fit=crop&q=80&fm=jpg",
-									"alt": "Office corridor with glass walls and concrete columns",
-									"filename": "halden-corridor.jpg"
+									"url": "https://images.unsplash.com/photo-1575318634028-6a0cfcb60c59?w=1200&h=1500&fit=crop&q=80&fm=jpg",
+									"alt": "窓辺の木の机に置かれたモニターとノートパソコン",
+									"filename": "yamagoya-desk.jpg"
 								}
 							},
-							"image_caption": "Floor 3 · 21.4 °C · CO₂ 612 ppm"
+							"image_caption": "2階の個室・机とモニター付き",
+							"image_first": false
 						},
 						{
 							"_type": "marketing_split",
 							"_version": 1,
 							"_key": "planning",
 							"anchor_id": "planning",
-							"eyebrow": "Planning",
-							"headline": "Plan the path to net zero.",
-							"body": "Model retrofits, solar and electrification against how your buildings really run, then track every project against the plan.",
-							"points": "Scenario plans for every building\nPayback and carbon side by side\nBoard-ready progress reports",
-							"cta_label": "See pricing",
+							"eyebrow": "法人研修・合宿",
+							"headline": "チームで来て、結論を持ち帰る。",
+							"body": "会議室、宿泊、食事をまとめて手配します。移動や店選びに時間を取られないので、そのぶん話し合いに時間を使えます。研修や合宿で、年間120社に使っていただいています。",
+							"points": "12人までの会議室を、終日貸し切りにできます\n東京駅からの送迎バスを手配できます\n3食付き。夜の懇親会にも対応します",
+							"cta_label": "法人プランを見る",
 							"cta_url": "/pricing",
 							"image": {
 								"$media": {
-									"url": "https://images.unsplash.com/photo-1694327671725-e2a81cda3436?w=1200&h=1500&fit=crop&q=80&fm=jpg",
-									"alt": "Rows of solar panels on a roof in warm light",
-									"filename": "halden-solar.jpg"
+									"url": "https://images.unsplash.com/photo-1758873268998-2f77c2d38862?w=1200&h=1500&fit=crop&q=80&fm=jpg",
+									"alt": "ホワイトボードの前で話し合うチーム",
+									"filename": "yamagoya-meeting.jpg"
 								}
 							},
-							"image_caption": "Rooftop solar · 312 MWh generated this year",
+							"image_caption": "会議室・ホワイトボード2面",
 							"image_first": true
 						},
 						{
 							"_type": "marketing_stats",
 							"_version": 1,
 							"_key": "results",
-							"headline": "What customers see in their first year.",
-							"subheadline": "Measured across 4,800 connected buildings.",
+							"headline": "数字で見る、峰沢村の山小屋。",
+							"subheadline": "施設の数字と、2025年度の受け入れ実績です。",
 							"stats": [
-								{ "value": "23%", "label": "Lower energy spend, on average" },
-								{ "value": "4,800", "label": "Buildings connected across 14 countries" },
-								{ "value": "9 mo", "label": "Average payback period" },
-								{ "value": "99.98%", "label": "Data uptime over the last 12 months" }
+								{
+									"value": "1,200m",
+									"label": "標高。夏の日中でも25℃前後です"
+								},
+								{
+									"value": "2時間40分",
+									"label": "東京駅からの所要時間"
+								},
+								{
+									"value": "18室",
+									"label": "全室に光回線とモニターを備えた個室"
+								},
+								{
+									"value": "120社",
+									"label": "1年間に受け入れた法人研修・合宿"
+								}
 							]
 						},
 						{
@@ -797,25 +1074,25 @@
 							"_version": 1,
 							"_key": "customers",
 							"anchor_id": "customers",
-							"headline": "Customers",
+							"headline": "利用した人の声",
 							"testimonials": [
 								{
-									"quote": "We found more savings in the first month than in five years of energy audits. Halden paid for itself before the first invoice was due.",
-									"author": "Maya Okafor",
-									"role": "Director of Facilities",
-									"company": "Calder University"
+									"quote": "合宿で一番効いたのは、夕食のあと会議室に戻れたことです。街のホテルなら店を探してそのまま解散になるところが、2日目の朝には来期の方針がまとまっていました。",
+									"author": "佐伯 美和",
+									"role": "開発部長",
+									"company": "北斗システムズ"
 								},
 								{
-									"quote": "Our GRESB submission used to take a quarter. Now it is a week of review, and the numbers hold up.",
-									"author": "Daniel Reyes",
-									"role": "Head of Sustainability",
-									"company": "Oakline"
+									"quote": "会員プランで、月に8泊しています。回線が安定しているので、取引先との打ち合わせにも部屋からそのまま出られます。",
+									"author": "野口 健太",
+									"role": "翻訳者",
+									"company": "個人会員"
 								},
 								{
-									"quote": "Guests never notice, which is the point. Our hotels use 19% less energy and nobody had to change how they work.",
-									"author": "Priya Nair",
-									"role": "VP Operations",
-									"company": "Arden Hotels"
+									"quote": "新人研修を3年続けてお願いしています。山道を歩く日を1日入れたら、配属のあとも同期どうしで連絡を取り合うようになりました。",
+									"author": "森田 由紀",
+									"role": "人事部 研修担当",
+									"company": "ミナト製作所"
 								}
 							]
 						},
@@ -824,28 +1101,28 @@
 							"_version": 1,
 							"_key": "faq",
 							"anchor_id": "faq",
-							"headline": "Questions, answered.",
-							"subheadline": "Something else on your mind? Our building engineers reply within one working day.",
+							"headline": "よくある質問",
+							"subheadline": "ほかに気になることがあれば、お問い合わせください。平日なら1営業日以内にお返事します。",
 							"items": [
 								{
-									"question": "Do we need new hardware?",
-									"answer": "Usually not. Halden connects to the meters, building management systems and utility accounts you already have. Where a site has no metering, we ship clip-on sensors that take an hour to fit."
+									"question": "車がなくても行けますか。",
+									"answer": "行けます。最寄りの峰沢駅から、宿の送迎車が1日4便出ています。法人プランでは、東京駅からの送迎バスも手配できます。"
 								},
 								{
-									"question": "How quickly will we see savings?",
-									"answer": "Most teams act on their first findings within two weeks of connecting a building. The early fixes are usually schedule and setpoint changes, such as plant that runs overnight or heating in empty rooms. The savings report at day 30 measures each change against the building's own baseline."
+									"question": "1泊だけでも泊まれますか。",
+									"answer": "泊まれます。会員でなくても、空室があれば1泊から予約できます。週末は埋まりやすいので、2週間前までの予約をおすすめします。"
 								},
 								{
-									"question": "Which reporting frameworks do you support?",
-									"answer": "Halden prepares CSRD, GRESB, ENERGY STAR, SECR and NABERS reports from the same metered data, so the figures agree across every submission. Your auditor can have read-only access to the readings behind each number."
+									"question": "回線の速さはどのくらいですか。",
+									"answer": "各部屋の有線LANで、下り300Mbps前後が出ています。Wi-Fiは混み合う時間帯に遅くなることがあるので、ビデオ会議には有線をおすすめします。"
 								},
 								{
-									"question": "Is our data secure?",
-									"answer": "Halden is audited every year against SOC 2 Type II and certified to ISO 27001. You choose EU or US hosting, and your meter data is encrypted in transit and at rest."
+									"question": "冬も営業していますか。",
+									"answer": "一年中営業しています。12月から3月は雪が積もるため、送迎車はスタッドレスタイヤで運行します。冬の夜は氷点下になるので、上着を1枚多めにお持ちください。"
 								},
 								{
-									"question": "Can Halden change settings on its own?",
-									"answer": "Only inside limits you set, such as comfort bands, occupancy hours and equipment you mark as off limits. Every change is logged with the reason it was made, and anyone on your team can roll it back."
+									"question": "法人研修の内容も相談できますか。",
+									"answer": "できます。会議室と宿泊の手配に加えて、山道を歩くプログラムや、村の農家での作業体験を組み込めます。人数や日程が決まっていなくても、まずはご相談ください。"
 								}
 							]
 						},
@@ -853,17 +1130,17 @@
 							"_type": "marketing_cta",
 							"_version": 1,
 							"_key": "cta",
-							"headline": "See what your buildings could save.",
-							"body": "Book a 30-minute walkthrough with a building engineer. Bring a utility bill and we will bring the numbers.",
-							"primary_cta_label": "Book a demo",
+							"headline": "まずは1泊、山で働いてみませんか。",
+							"body": "空室の状況と料金は、お問い合わせから確認できます。法人合宿は、人数と時期だけ決まっていれば見積もりを出せます。",
+							"primary_cta_label": "空室を問い合わせる",
 							"primary_cta_url": "/contact",
-							"secondary_cta_label": "Talk to sales",
-							"secondary_cta_url": "mailto:sales@halden.example",
+							"secondary_cta_label": "法人合宿の相談",
+							"secondary_cta_url": "mailto:houjin@yamagoya-works.example",
 							"image": {
 								"$media": {
-									"url": "https://images.unsplash.com/photo-1674763973434-75e1930d4959?w=2400&h=1350&fit=crop&q=80&fm=jpg",
-									"alt": "Timber-lined atrium opening to the sky",
-									"filename": "halden-timber-atrium.jpg"
+									"url": "https://images.unsplash.com/photo-1701518358370-22ce0e925e06?w=2400&h=1350&fit=crop&q=80&fm=jpg",
+									"alt": "霧のかかった山の尾根",
+									"filename": "yamagoya-ridge.jpg"
 								}
 							}
 						}
@@ -875,14 +1152,14 @@
 				"slug": "pricing",
 				"status": "published",
 				"data": {
-					"title": "Pricing",
+					"title": "料金",
 					"content": [
 						{
 							"_type": "marketing_hero",
 							"_version": 1,
 							"_key": "pricing-hero",
-							"headline": "Pricing that pays for itself.",
-							"subheadline": "Start with one building for free. Every plan includes onboarding, live metering and support from energy engineers.",
+							"headline": "1泊から、月単位まで。",
+							"subheadline": "どのプランも、個室のモニターと光回線、24時間のラウンジを使えます。",
 							"centered": true
 						},
 						{
@@ -891,32 +1168,32 @@
 							"_key": "pricing-plans",
 							"plans": [
 								{
-									"name": "Pilot",
-									"price": "Free",
-									"period": "for 30 days",
-									"description": "Prove the savings on one building before you commit.",
-									"features": "1 building\nLive metering and fault detection\nSavings report at day 30\nEmail support",
-									"cta_label": "Start a pilot",
+									"name": "お試し1泊",
+									"price": "¥9,800",
+									"period": "/ 1泊・朝食付き",
+									"description": "まず1泊して、仕事ができるか確かめる。",
+									"features": "個室・27インチのモニター\n24時間のラウンジ\n村の共同浴場",
+									"cta_label": "空室を問い合わせる",
 									"cta_url": "/contact"
 								},
 								{
-									"name": "Portfolio",
-									"price": "$149",
-									"period": "/building/month",
-									"description": "For owners and operators running 5 to 500 buildings.",
-									"features": "Unlimited buildings and users\nAutomated BMS control\nCSRD, GRESB and ENERGY STAR reporting\nPortfolio benchmarking\nA dedicated energy engineer",
-									"cta_label": "Book a demo",
+									"name": "会員プラン",
+									"price": "¥29,800",
+									"period": "/ 月",
+									"description": "月に何日か、山で働く人向け。",
+									"features": "月4泊まで\n村の共同浴場が無料\n東京駅からの送迎バスを手配",
+									"cta_label": "会員の申し込み",
 									"cta_url": "/contact",
 									"highlighted": true,
-									"badge": "Most popular"
+									"badge": "いちばん人気"
 								},
 								{
-									"name": "Enterprise",
-									"price": "Custom",
-									"description": "For global portfolios with custom integration and security needs.",
-									"features": "Everything in Portfolio\nSSO, SCIM and audit logs\nEU or US data residency\nCustom integrations and API access\n99.9% uptime SLA",
-									"cta_label": "Talk to sales",
-									"cta_url": "mailto:sales@halden.example"
+									"name": "法人研修・合宿",
+									"price": "お見積り",
+									"description": "5〜30人のチーム向け。",
+									"features": "会議室を終日貸し切り\n3食付き・懇親会に対応\n山歩きや農作業の体験",
+									"cta_label": "相談する",
+									"cta_url": "mailto:houjin@yamagoya-works.example"
 								}
 							]
 						},
@@ -924,24 +1201,20 @@
 							"_type": "marketing_faq",
 							"_version": 1,
 							"_key": "pricing-faq",
-							"headline": "Pricing questions.",
-							"subheadline": "Still deciding? Talk to an energy engineer before you start a pilot.",
+							"headline": "料金についての質問",
+							"subheadline": "ほかに気になることは、お気軽にお問い合わせください。",
 							"items": [
 								{
-									"question": "What counts as a building?",
-									"answer": "Any site with its own utility meter or building management system, from a 40-storey office tower to a single retail unit. Several buildings on one shared meter count as one until you add sub-meters to measure them separately."
+									"question": "キャンセル料はかかりますか？",
+									"answer": "前日のキャンセルは料金の50%、当日は100%をいただきます。2日前までは無料です。"
 								},
 								{
-									"question": "Are there setup fees?",
-									"answer": "No. Every plan, including the pilot, covers onboarding, connecting your meters and building systems, and training for your team. Clip-on sensors for unmetered sites are supplied at cost."
+									"question": "会員の泊数は翌月に繰り越せますか？",
+									"answer": "繰り越せません。使わなかった泊数は月末で終わります。"
 								},
 								{
-									"question": "Is there a discount for annual billing?",
-									"answer": "Yes. Annual billing takes 15% off the Portfolio price and is invoiced on NET 30 terms. You can move from monthly to annual billing at any time."
-								},
-								{
-									"question": "What happens after the pilot?",
-									"answer": "On day 30 you receive a savings report for the pilot building. Move to the Portfolio plan to keep its data, alerts and automations running, or stop there and we delete the data within 30 days."
+									"question": "法人は請求書払いにできますか？",
+									"answer": "できます。研修・合宿のあと、月末締めの翌月末払いで請求書をお送りします。"
 								}
 							]
 						},
@@ -949,12 +1222,12 @@
 							"_type": "marketing_cta",
 							"_version": 1,
 							"_key": "pricing-cta",
-							"headline": "Start with one building.",
-							"body": "Connect a site in an afternoon and see your first savings report in 30 days.",
-							"primary_cta_label": "Start a pilot",
+							"headline": "まずは1泊、試してみてください。",
+							"body": "東京から2時間40分。個室のモニターと光回線で、いつもの仕事をそのまま続けられます。",
+							"primary_cta_label": "空室を問い合わせる",
 							"primary_cta_url": "/contact",
-							"secondary_cta_label": "Talk to sales",
-							"secondary_cta_url": "mailto:sales@halden.example"
+							"secondary_cta_label": "法人合宿の相談",
+							"secondary_cta_url": "mailto:houjin@yamagoya-works.example"
 						}
 					]
 				}
@@ -964,14 +1237,14 @@
 				"slug": "contact",
 				"status": "published",
 				"data": {
-					"title": "Contact",
+					"title": "お問い合わせ",
 					"content": [
 						{
 							"_type": "marketing_hero",
 							"_version": 1,
 							"_key": "contact-hero",
-							"headline": "Talk to the Halden team",
-							"subheadline": "Questions, a demo, or a building you want us to look at? Email the team that can help and include any useful context. We reply within one working day.",
+							"headline": "山小屋ワークスへのお問い合わせ",
+							"subheadline": "内容に合った窓口へメールをお送りください。1営業日以内に返信します。",
 							"centered": true
 						},
 						{
@@ -981,24 +1254,24 @@
 							"options": [
 								{
 									"icon": "email",
-									"title": "General questions",
-									"description": "Ask about Halden, partnerships, press, or a building you’d like us to look at.",
-									"link_label": "hello@halden.example",
-									"link_url": "mailto:hello@halden.example"
+									"title": "空室・宿泊",
+									"description": "空室の確認、宿泊の予約や変更、行き方についてのご質問。",
+									"link_label": "info@yamagoya-works.example",
+									"link_url": "mailto:info@yamagoya-works.example"
 								},
 								{
 									"icon": "support",
-									"title": "Customer support",
-									"description": "Get help with your account, a meter integration, or a building that’s already connected.",
-									"link_label": "support@halden.example",
-									"link_url": "mailto:support@halden.example"
+									"title": "会員プラン",
+									"description": "会員の申し込み、泊数の確認、送迎バスの手配。",
+									"link_label": "member@yamagoya-works.example",
+									"link_url": "mailto:member@yamagoya-works.example"
 								},
 								{
 									"icon": "sales",
-									"title": "Sales",
-									"description": "Talk through pricing, a pilot, procurement or a security review for your portfolio.",
-									"link_label": "sales@halden.example",
-									"link_url": "mailto:sales@halden.example"
+									"title": "法人研修・合宿",
+									"description": "人数や日程、研修の内容に合わせてお見積りします。",
+									"link_label": "houjin@yamagoya-works.example",
+									"link_url": "mailto:houjin@yamagoya-works.example"
 								}
 							]
 						}
